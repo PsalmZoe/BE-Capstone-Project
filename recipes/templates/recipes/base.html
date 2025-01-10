@@ -41,7 +41,13 @@
           </div>
         </div>
       </nav>
-      <div class="container" mt-4 col-8>{% block content %} {% endblock content %}</div>
+      <div class="container" mt-4 col-8>
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+        {% block content %} {% endblock content %}</div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" 
