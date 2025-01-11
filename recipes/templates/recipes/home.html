@@ -2,6 +2,7 @@
 <!--  -->
 {% block content %}
 
+{% for recipe in recipes %}
 <div class="card my-4" style="width: 18rem;">
     <img src="https://www.preciouscore.com/wp-content/uploads/2018/08/Nigerian-Jollof-Rice.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -12,4 +13,5 @@
           <a href="{% url 'recipes-detail' recipe.pk %}" class="btn btn-primary">View Recipe</a>
     </div>
   </div>
-{% endfor %} {% endblock content %}
+{% endfor %} 
+{% endblock content %}
