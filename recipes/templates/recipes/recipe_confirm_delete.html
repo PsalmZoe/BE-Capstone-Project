@@ -7,15 +7,15 @@
     <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Sign Up!</legend>
+            <legend class="mb-4">Are you sure you want to delete? {{ objectn}}</legend>
             {{ form|crispy }}
         </fieldset>
         <div class="form-group py-3">
-            <input class="btn btn-outline-primary" type="submit" value="Sign Up"/>
+            <input class="btn btn-outline-danger" type="submit" value="delete"/>
         </div>
     </form> 
     <div class="border-top pt-3">
-        <a href="{% url 'user-login' %}">Already registered? Log in here</a>
+        <a href="{% url 'recipes-home' %}">Cancel</a>
     </div>
 </div>
 {% endblock content %}
