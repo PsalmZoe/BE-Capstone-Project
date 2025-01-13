@@ -40,8 +40,8 @@ Obtains JWT token pair for authentication.
 Request body:
 ```json
 {
-    "username": "#",
-    "password": "#"
+    "username": "David",
+    "password": "Qwerty7890"
 }
 ```
 
