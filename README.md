@@ -32,7 +32,7 @@ Response (201 Created):
 }
 ```
 
-### Login
+### Admin Login
 **Endpoint:** `POST /api/auth/token/`
 
 Obtains JWT token pair for authentication.
